@@ -1,3 +1,7 @@
+import assemblyInspectionVideo from '../assets/applications-component/AssemblyInspection.mp4'
+import chassisInspectionVideo from '../assets/applications-component/ChasisInspection.mp4'
+import cosmeticInspectionVideo from '../assets/applications-component/CosmeticInspection.mp4'
+import labelInspectionVideo from '../assets/applications-component/LabelInspection.mp4'
 import {
   CodeXml,
   Smartphone,
@@ -7,6 +11,14 @@ import {
   type LucideIcon,
   Linkedin,
   Instagram,
+  Car,
+  BatteryCharging,
+  ShoppingCart,
+  HeartPulse,
+  CircuitBoard,
+  Building,
+  Wind,
+  Beaker,
 } from "lucide-preact";
 import { PlaceHolderImages } from "./placeholder-images";
 import hanonLogo from "../../src/assets/hanon.png";
@@ -532,25 +544,69 @@ export const energyBenefits = [
   "Sustainability goals support",
   "Integration with Production Data",
 ];
-const dashboardImages = PlaceHolderImages.filter(p => p.id.startsWith("dashboard-")).map(p => p.imageUrl);
+const dashboardImages = PlaceHolderImages.filter((p) =>
+  p.id.startsWith("dashboard-")
+).map((p) => p.imageUrl);
 
 export const productDashboards = [
   {
     title: "Real-Time Sales Analytics",
-    description: "A dashboard providing live insights into sales performance, tracking KPIs like revenue, conversion rates, and top-selling products.",
+    description:
+      "A dashboard providing live insights into sales performance, tracking KPIs like revenue, conversion rates, and top-selling products.",
     image: dashboardImages[0],
-    imageHint: "sales dashboard"
+    imageHint: "sales dashboard",
   },
   {
     title: "User Engagement Tracker",
-    description: "Monitor user activity, feature adoption, and retention metrics to understand user behavior and improve product experience.",
+    description:
+      "Monitor user activity, feature adoption, and retention metrics to understand user behavior and improve product experience.",
     image: dashboardImages[1],
-    imageHint: "user analytics"
+    imageHint: "user analytics",
   },
   {
     title: "Inventory Management System",
-    description: "An intuitive dashboard for tracking stock levels, managing supply chain, and forecasting inventory needs to prevent stockouts.",
+    description:
+      "An intuitive dashboard for tracking stock levels, managing supply chain, and forecasting inventory needs to prevent stockouts.",
     image: dashboardImages[2],
-    imageHint: "inventory ui"
-  }
+    imageHint: "inventory ui",
+  },
+];
+
+export const applications = [
+  {
+    title: "Assembly Inspection AI",
+    description: "Identifies objects and verifies complex product assemblies",
+    video: assemblyInspectionVideo,
+    videoHint: "circuit board",
+  },
+  {
+    title: "Cosmetic Inspection AI",
+    description: "Captures minute surface-level defects and anomalies",
+    video: cosmeticInspectionVideo,
+    videoHint: "car door",
+  },
+  {
+    title: "Dimensioning AI",
+    description:
+      "Validates critical product dimensions of various shapes and kinds",
+    video: chassisInspectionVideo,
+    videoHint: "mechanical part",
+  },
+  {
+    title: "Label Inspection AI",
+    description:
+      "Reads and verifies complex characters on various kinds of surfaces",
+    video: labelInspectionVideo,
+    videoHint: "product label",
+  },
+];
+export const industries = [
+  { title: "Automobile & Transportation", icon: Car },
+  { title: "Battery and Electric Vehicles", icon: BatteryCharging },
+  { title: "Consumer Goods and FMCG", icon: ShoppingCart },
+  { title: "Healthcare and Medical Devices", icon: HeartPulse },
+  { title: "Electronics and Semiconductors", icon: CircuitBoard },
+  { title: "Building Materials and Infrastructure", icon: Building },
+  { title: "Energy and Utilities", icon: Wind },
+  { title: "Chemicals and Plastics", icon: Beaker },
 ];

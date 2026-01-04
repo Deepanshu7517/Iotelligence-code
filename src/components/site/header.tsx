@@ -52,7 +52,7 @@ export default function Header() {
       className={cn(
         "sticky lg:top-3 top-0 m-auto z-50 lg:w-9/12 transition-all duration-300 lg:rounded-xl ",
         scrolled
-          ? "border-b border-border/60 bg-white/10 backdrop-blur-sm"
+          ? "border-b border-border/60 bg-white/30 backdrop-blur-sm"
           : ""
       )}
     >
